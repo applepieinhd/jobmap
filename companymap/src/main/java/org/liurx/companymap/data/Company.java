@@ -1,5 +1,6 @@
 package org.liurx.companymap.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Company {
@@ -43,5 +44,4 @@ public class Company {
 		return "Company [id=" + id + ", shortName=" + shortName + ", name=" + name + ", addressList=" + addressList
 				+ ", coordinateList=" + coordinateList + "]";
 	}
-	
 }

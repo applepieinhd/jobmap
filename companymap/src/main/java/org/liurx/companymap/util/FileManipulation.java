@@ -22,8 +22,8 @@ public class FileManipulation {
 	}
 	
 	public static void downloadHtml(List<Company> companyList) {
-		try {
-			for (Company company:companyList) {
+		for (Company company:companyList) {
+			try {
 	//			System.out.println(companyMap.get("companyId") + ", name: " + companyMap.get("companyShortName"));
 				String id = company.getId();
 				
@@ -34,20 +34,22 @@ public class FileManipulation {
 				if (!html.exists()) {
 					
 					try {
-						Thread.sleep(500);
+						Thread.sleep(200);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 					
 					String url = GlobalParam.URL_PREFIX + htmlFile;
-					companyPage = HttpConfigUtil.getHttpResponse(url);
+					companyPage = HttpUtil.get(url);
 					saveFile(companyPage, GlobalParam.TARGET_DIR + htmlFile);
 				}
-				
+			} catch(Exception e) {
+				e.printStackTrace();
+				System.out.println("no page: " + company.getShortName() + ", id: " + company.getId());
 			}
-		} catch(Exception e) {
-			e.printStackTrace();
+			
 		}
+		
 		
 		
 //		output(companyList, TARGET_DIR + "summary");
@@ -120,7 +122,7 @@ public class FileManipulation {
 	}
 	
 	public static void output(List<Company> list, String target) {
-		String head = "id\tshortName\t\t\taddress\n";
+		String head = "id,shortName,address\n";
 		
 		FileWriter writer = null;
 		File outFile = new File(target);
@@ -128,7 +130,7 @@ public class FileManipulation {
 			writer = new FileWriter(outFile);
 			writer.write(head);
 			for (Company com:list) {
-				writer.write(com.getId() + "\t" + com.getShortName() + "\t\t\t" + com.getAddressList() + "\n");
+				writer.write(com.getId() + "," + com.getShortName() + "," + com.getAddressList() + "\n");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
