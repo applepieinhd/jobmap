@@ -1,4 +1,4 @@
-package org.liurx.companymap.util;
+package org.liurx.jobmap.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

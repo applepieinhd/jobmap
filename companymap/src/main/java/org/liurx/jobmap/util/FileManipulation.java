@@ -1,4 +1,4 @@
-package org.liurx.companymap.util;
+package org.liurx.jobmap.util;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,8 +8,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import org.liurx.companymap.data.Company;
-import org.liurx.companymap.param.GlobalParam;
+import org.liurx.jobmap.data.Company;
+import org.liurx.jobmap.param.GlobalParam;
 
 public class FileManipulation {
 	public static File[] listFile(String dirPath) {

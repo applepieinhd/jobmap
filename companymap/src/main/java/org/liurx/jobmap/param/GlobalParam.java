@@ -1,4 +1,4 @@
-package org.liurx.companymap.param;
+package org.liurx.jobmap.param;
 
 public class GlobalParam {
 	//百度API

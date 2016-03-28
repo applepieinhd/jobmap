@@ -1,8 +1,8 @@
-package org.liurx.companymap.util;
+package org.liurx.jobmap.util;
 
 import java.util.Map;
 
-import org.liurx.companymap.data.Company;
+import org.liurx.jobmap.data.Company;
 
 public class TypeConverter {
 	public static Company map2Company(Map map) {

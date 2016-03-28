@@ -1,4 +1,4 @@
-package org.liurx.companymap.extract;
+package org.liurx.jobmap.extract;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.liurx.companymap.data.Company;
-import org.liurx.companymap.util.FileManipulation;
-import org.liurx.companymap.util.HttpUtil;
-import org.liurx.companymap.util.TypeConverter;
+import org.liurx.jobmap.data.Company;
+import org.liurx.jobmap.util.FileManipulation;
+import org.liurx.jobmap.util.HttpUtil;
+import org.liurx.jobmap.util.TypeConverter;
 
 import com.dawning.gridview.common.util.service.commonfunction.export.json.JsonUtil;
 

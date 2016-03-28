@@ -1,4 +1,4 @@
-package org.liurx.companymap.logger;
+package org.liurx.jobmap.logger;
 //
 //import java.util.Properties;
 //

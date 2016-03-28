@@ -1,4 +1,4 @@
-package org.liurx.companymap.data;
+package org.liurx.jobmap.data;
 
 public class Coordinate {
 	String longitude;

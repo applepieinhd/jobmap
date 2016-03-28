@@ -1,7 +1,7 @@
-package org.liurx.companymap.util;
+package org.liurx.jobmap.util;
 
-import org.liurx.companymap.data.Coordinate;
-import org.liurx.companymap.param.GlobalParam;
+import org.liurx.jobmap.data.Coordinate;
+import org.liurx.jobmap.param.GlobalParam;
 
 public class CoordinateUtil {
 	public static boolean isInBJ(Coordinate cor) {
