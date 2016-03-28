@@ -1,6 +1,5 @@
 package org.liurx.companymap.data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Company {

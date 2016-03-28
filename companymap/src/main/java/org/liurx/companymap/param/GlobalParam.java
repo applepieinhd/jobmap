@@ -1,6 +1,14 @@
 package org.liurx.companymap.param;
 
 public class GlobalParam {
+	//百度API
+	public static final String CREATE_POI = "http://api.map.baidu.com/geodata/v3/poi/create";
+	public static final String DELETE_POI = "http://api.map.baidu.com/geodata/v3/poi/delete";
+	
+	public static final String SUCCESS = "0";
+	public static final String BATCH_SUCCESS = "21";
+	
+	
 	public static final String SRC_DIR = "/Users/lrx/Documents/my_workspace/companyData/";
 	public static final String TARGET_DIR = "/Users/lrx/Documents/my_workspace/companyData/html/";
 	public static final String URL_PREFIX = "http://www.lagou.com/gongsi/";
