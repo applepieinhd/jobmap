@@ -1,7 +1,14 @@
-package org.liurx.jobmap.data;
+package org.liurx.companymap.data;
 
 import java.util.List;
 
+/**
+ * 公司信息
+ * @class Company
+ * @date 2016年10月19日 下午7:37:10
+ * @author liurx
+ * @since 4.0.0
+ */
 public class Company {
 	private String id;
 	private String shortName;

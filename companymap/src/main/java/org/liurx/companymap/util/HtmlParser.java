@@ -1,15 +1,17 @@
-package org.liurx.jobmap.util;
+package org.liurx.companymap.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.DataNode;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-
-import com.dawning.gridview.common.util.service.commonfunction.export.json.JsonUtil;
+import org.liurx.companymap.logger.MapLogger;
+import org.liurx.companymap.util.JsonUtil;
 
 public class HtmlParser {
 	
@@ -40,24 +42,18 @@ public class HtmlParser {
 	}
 	
 	public static void main(String[] args) {
-		String filePath = "/Users/lrx/Documents/my_workspace/companyMap/out/147.html";
+		String filePath = "/Users/lrx/Documents/my_workspace/companyData/html/147.html";
 		
 		Document doc = parseFile(filePath);
 		Element infoData = doc.getElementById("companyInfoData");
 		
 		List<DataNode> dataList = infoData.dataNodes();
-//		System.out.println(dataList);
+//		MapLogger.debug(dataList);
 		for (DataNode node:dataList) {
-//			System.out.println(node);
-			
-//			String[] strArray = JsonUtil.getStringArray4Json(node.toString());
-//			for (String str:strArray) {
-//				System.out.println(str);
-//			}
-			Object locationStr = JsonUtil.getMap4Json(node.toString()).get("location");
-			String[] strArray = JsonUtil.getStringArray4Json(locationStr.toString());
-			for (String str:strArray) {
-				System.out.println(JsonUtil.getMap4Json(str).get("detailPosition"));
+			ArrayList<Map> locationStr = (ArrayList) JsonUtil.getMap4Json(node.toString()).get("location");
+//			Map[] mapArray = JsonUtil.getMapArray4Json(locationStr.toString());
+			for (Map location:locationStr) {
+				MapLogger.debug(location.get("detailPosition"));
 			}
 		}
 	}

@@ -1,5 +1,12 @@
-package org.liurx.jobmap.data;
+package org.liurx.companymap.data;
 
+/**
+ * 坐标
+ * @class Coordinate
+ * @date 2016年10月19日 下午7:36:57
+ * @author liurx
+ * @since 4.0.0
+ */
 public class Coordinate {
 	String longitude;
 	String latitude;

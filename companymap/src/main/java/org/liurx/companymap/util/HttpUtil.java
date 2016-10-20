@@ -1,4 +1,4 @@
-package org.liurx.jobmap.util;
+package org.liurx.companymap.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
+
+import org.liurx.companymap.logger.MapLogger;
 
 /**
  * 工具类，获取HTTP配置，json转成嵌套的Map
@@ -125,7 +127,7 @@ public class HttpUtil {
                 result += line;
             }
         } catch (Exception e) {
-            System.out.println("发送 POST 请求出现异常！"+e);
+        	MapLogger.debug("发送 POST 请求出现异常！"+e);
             e.printStackTrace();
         }
         //使用finally块来关闭输出流、输入流
